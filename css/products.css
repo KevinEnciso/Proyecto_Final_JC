@@ -64,6 +64,9 @@ body {
     text-align: center;
     padding: 50px 20px;
     background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
 }
 
 .products img {
