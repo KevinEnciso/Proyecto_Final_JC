@@ -81,6 +81,11 @@ body {
     background-color: #fff;
 }
 
+p{
+    padding: 15px 500px 15px 500px;
+    text-align: justify;
+}
+
 /* Pie de página, contácto */
 .footer {
     background-color: #a4dd43;
