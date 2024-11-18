@@ -1,9 +1,10 @@
-/* General Styles*/
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: white; /* Fondo blanco general */
 }
 
 /* Navbar */
@@ -61,21 +62,18 @@ body {
 }
 
 /* Secciones */
-.banner, .footer {
-    text-align: center;
-}
-
 .banner {
     background-color: #fff;
     padding: 15px 250px 15px 250px;
     text-align: justify;
 }
 
-/* Pie de página, contácto */
+/* Footer */
 .footer {
     background-color: #a4dd43;
     color: #fff;
     padding: 20px;
+    text-align: center;
 }
 
 .footer a {
@@ -87,3 +85,60 @@ body {
 .footer a:hover {
     color: #000000;
 }
+
+/* Objetivos */
+.container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas dinámicamente */
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.objective {
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.objective h2 {
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.objective p {
+    font-size: 1rem;
+    color: #666;
+    text-align: justify;
+}
+
+.about-us {
+  border: 2px solid #ffb347; /* Color naranja */
+  border-radius: 15px;
+  padding: 1rem;
+  background-color: #fffaf0; /* Fondo ligeramente amarillo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  max-width: 800px; /* Ancho máximo para centrar */
+  text-align: justify;
+  font-size: 1rem;
+  color: #666;
+}
+
+#economic { border-color: #f0a5a5; }
+#technological { border-color: #c0b0f0; }
+#environmental { border-color: #a5d5f0; }
+#social { border-color: #f0c5a5; }
+#technical { border-color: #b8e6a1; }
