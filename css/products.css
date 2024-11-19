@@ -16,23 +16,51 @@ body {
     padding: 15px 20px;
 }
 
+/* Logo */
 .navbar-logo {
     font-size: 1.8em;
     font-weight: bold;
-    color: #fff;
+    flex-grow: 1; /* Empuja el logo hacia la izquierda */
 }
 
+/* Información del usuario (izquierda) */
+#user-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#user-info img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#user-info span {
+    margin-right: 5px;
+}
+
+#user-avatar{
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+/* Botón de menú (derecha) */
 .navbar-toggle {
     font-size: 1.5em;
-    color: #fff;
     cursor: pointer;
     display: block;
+    margin-left: auto; /* Empuja el botón de menú a la derecha */
 }
 
-/* Menú desplegable */
+/* Menú de navegación */
 .navbar-menu {
     list-style: none;
-    display: none; /* Oculto por defecto */
+    display: none;
     flex-direction: column;
     gap: 15px;
     margin: 0;
@@ -45,7 +73,7 @@ body {
 }
 
 .navbar-menu.show {
-    display: flex; /* Muestra el menú cuando está activo */
+    display: flex;
 }
 
 .navbar-menu a {
@@ -53,47 +81,84 @@ body {
     text-decoration: none;
     font-size: 1.1em;
     padding: 8px 12px;
-    transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #000000;
+    color: #000;
 }
 
-.products {
+/* Estilos para los elementos de la barra de navegación */
+.navbar-menu li {
+    list-style: none;
+}
+
+.navbar-menu li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.navbar-menu li a:hover {
+    color: #000;
+}
+
+/* Page Title */
+.page-title {
     text-align: center;
-    padding: 50px 20px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    margin: 20px 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Productos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.products div {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .products img {
-    max-width: 30%;
-    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* Secciones */
-.banner, .footer {
-    padding: 50px 20px;
+.products p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
     text-align: center;
 }
 
-.banner {
-    background-color: #fff;
-}
-
-p{
-    padding: 15px 500px 15px 500px;
-    text-align: justify;
-}
-
-/* Pie de página, contácto */
+/* Footer */
 .footer {
     background-color: #a4dd43;
     color: #fff;
     padding: 20px;
+    text-align: center;
+    margin-top: 60px;
 }
 
 .footer a {
@@ -103,5 +168,15 @@ p{
 }
 
 .footer a:hover {
-    color: #000000;
+    color: #000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .navbar-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
 }

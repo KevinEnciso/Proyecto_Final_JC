@@ -12,7 +12,7 @@
         <div class="form-container" id="login-container">
             <h2>Iniciar Sesión</h2>
             <form id="login-form">
-                <input type="text" placeholder="Usuario" required>
+                <input type="email" placeholder="Correo Electrónico" id="login-email" required>
                 <input type="password" placeholder="Contraseña" id="login-password" required>
                 <button type="submit">Iniciar Sesión</button>
                 <p class="toggle" onclick="toggleForm()">¿No tienes una cuenta? Regístrate</p>
@@ -24,9 +24,19 @@
         <div class="form-container hidden" id="register-container">
             <h2>Registro</h2>
             <form id="register-form">
-                <input type="text" placeholder="Usuario" required>
-                <input type="email" placeholder="Correo" required>
+                <input type="text" placeholder="Nombre" id="register-name" required>
+                <input type="text" placeholder="Apellido" id="register-lastname" required>
+                <input type="email" placeholder="Correo Electrónico" id="register-email" required>
                 <input type="password" placeholder="Contraseña" id="register-password" required>
+                
+                <label for="gender">Género</label>
+                <select id="register-gender" required>
+                    <option value="" disabled selected>Seleccione su género</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+
                 <button type="submit">Registrarse</button>
                 <p class="toggle" onclick="toggleForm()">¿Ya tienes una cuenta? Inicia Sesión</p>
                 <a class="toggle" href="../index.html">Volver al Inicio</a>

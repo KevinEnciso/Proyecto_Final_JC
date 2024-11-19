@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +7,69 @@
     <link rel="stylesheet" href="../css/products.css">
 </head>
 <body>
+    <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="navbar-logo">WaterMelon</div>
         <div class="navbar-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="navbar-menu">
-            <li><a href="login_register.html">Iniciar Sesión</a></li>
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="about_us.html">Acerca de Nosotros</a></li>
-            <li><a href="products.html">Productos</a></li>
+        <ul class="navbar-menu" id="navbar-menu">
+            <!-- Información del usuario y opción de cerrar sesión (movido fuera del menú) -->
+            <div id="user-info" style="display:none; display: flex; align-items: center;">
+                <span id="username"></span> <span id="user-lastname"></span> | 
+                <a href="../index.html" id="logout-link">Cerrar Sesión</a>
+            </div>
+            
             <li><a href="reviews.html">Reseñas</a></li>
             <li><a href="#footer">Contacto</a></li>
         </ul>
     </nav>
 
-    <section class="products" class="banner">
-        <div>
-            <img id="Ball" src="../images/Vollleyball_ball.png" alt="Balón">
-            <p><b>Balones de voleibol:</b> Resistentes y cómodos, con acolchado que protege el cuerpo, fabricados con materiales reciclables. Ofrecen sostenibilidad ambiental y diseños llamativos.</p>
-            <button type="button">Comprar</button>
-        </div>
-        <div>
-            <img src="../images/Vollleyball_knee_pad.jpg" alt="Rodilleras">
-            <p><b>Rodilleras:</b> Disponibles en varias tallas, son cómodas y están hechas de materiales reciclables, ideales para protegerse de golpes, con un diseño atractivo.</p>
-            <button type="button">Comprar</button>
-        </div>
-        <div>
-            <img src="../images/Vollleyball_elbow_pad.png" alt="">
-            <p><b>Braceras:</b> Fabricadas con materiales reciclables, brindan soporte y comodidad con un diseño ergonómico y tallas variadas.</p>
-            <button type="button">Comprar</button>
-        </div>
 
+    <!-- Título de la página -->
+    <header class="page-title">
+        <h1>Catálogo WaterMelon</h1>
+    </header>
+
+    <!-- Sección de productos -->
+    <section class="products">
+        <div>
+            <img src="../images/Vollleyball_ball.png" alt="Balón">
+            <p>Balones</p>
+        </div>
+        <div>
+            <img src="../images/Vollleyball_knee_pad.png" alt="Rodilleras">
+            <p>Rodilleras</p>
+        </div>
+        <div>
+            <img src="../images/Vollleyball_elbow_pad.png" alt="Braceras">
+            <p>Braceras</p>
+        </div>
+        <div>
+            <img src="../images/Camisetas_Unicolor.png" alt="Camiseta">
+            <p>Camisetas Unicolor</p>
+        </div>
+        <div>
+            <img src="../images/Camisetas_Sin_Mangas_Unicolor.png" alt="Camiseta Sin Mangas">
+            <p>Camisetas Unicolor Sin Mangas</p>
+        </div>
+        <div>
+            <img src="../images/Pantaloneta_Unicolor.png" alt="Pantaloneta">
+            <p>Pantalonetas</p>
+        </div>
+        <div>
+            <img src="../images/Short_Corto_Unicolor.png" alt="Shorts Cortos">
+            <p>Shorts Cortos</p>
+        </div>
+        <div>
+            <img src="../images/Short_Medio_Unicolor.png" alt="Shorts Medios">
+            <p>Shorts Medios</p>
+        </div>
+        <div>
+            <img src="../images/Zapatillas_1.png" alt="Zapatillas">
+            <p>Zapatillas</p>
+        </div>
     </section>
 
+    <!-- Pie de página -->
     <footer id="footer" class="footer">
         <h3>Conéctate con nosotros</h3>
         <a href="https://www.facebook.com/profile.php?id=61568351644784">Facebook</a>

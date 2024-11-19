@@ -133,8 +133,12 @@ body {
   margin: 2rem auto;
   max-width: 800px; /* Ancho máximo para centrar */
   text-align: justify;
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: #666;
+}
+
+.logo-2{
+    float: left;
 }
 
 #economic { border-color: #f0a5a5; }
