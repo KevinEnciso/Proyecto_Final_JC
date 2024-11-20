@@ -1,20 +1,24 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white; /* Fondo blanco general */
+    background-color: #f5f5f5; /* Fondo neutro */
+    color: #333; /* Texto oscuro para mejor legibilidad */
 }
 
 /* Navbar */
 .navbar {
-    background-color: #a4dd43;
+    background-color: #88c057; /* Color común */
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar-logo {
@@ -27,26 +31,15 @@ body {
     font-size: 1.5em;
     color: #fff;
     cursor: pointer;
-    display: block;
+    display: none; /* Ocultar para pantallas grandes */
 }
 
-/* Menú desplegable */
 .navbar-menu {
     list-style: none;
-    display: none; /* Oculto por defecto */
-    flex-direction: column;
+    display: flex;
     gap: 15px;
     margin: 0;
-    padding: 20px;
-    background-color: #80ac35;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-}
-
-.navbar-menu.show {
-    display: flex; /* Muestra el menú cuando está activo */
+    padding: 0;
 }
 
 .navbar-menu a {
@@ -54,23 +47,111 @@ body {
     text-decoration: none;
     font-size: 1.1em;
     padding: 8px 12px;
-    transition: color 0.3s ease;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #000000;
+    background-color: #222; /* Color común de fondo en hover */
+    color: #fff; /* Asegurar que el texto sea blanco */
 }
 
-/* Secciones */
-.banner {
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Mostrar toggle en pantallas pequeñas */
+    }
+    .navbar-menu {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        background-color: #88c057; /* Color común */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .navbar-menu.show {
+        display: flex;
+    }
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo-section {
+    margin-bottom: 3rem;
+}
+
+.logo-section img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #88c057; /* Color común */
+    margin-bottom: 1rem;
+}
+
+#about-us {
     background-color: #fff;
-    padding: 15px 250px 15px 250px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 800px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+}
+
+/* Sección de objetivos */
+.objectives {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.objective {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.objective:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.objective h2 {
+    font-size: 1.5rem;
+    color: #88c057; /* Color común */
+    margin-bottom: 1rem;
+}
+
+.objective p {
+    font-size: 1rem;
+    color: #666;
     text-align: justify;
 }
 
 /* Footer */
 .footer {
-    background-color: #a4dd43;
+    background-color: #88c057; /* Color común */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -80,69 +161,11 @@ body {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #000000;
+    background-color: #222; /* Color común de fondo en hover */
+    color: #fff; /* Asegurar que el texto sea blanco */
 }
-
-/* Objetivos */
-.container {
-    text-align: center;
-    padding: 2rem;
-}
-
-.title {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
-
-.objectives {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta las columnas dinámicamente */
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.objective {
-    border: 2px solid #ddd;
-    border-radius: 15px;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.objective h2 {
-    font-size: 1.5rem;
-    color: #555;
-}
-
-.objective p {
-    font-size: 1rem;
-    color: #666;
-    text-align: justify;
-}
-
-.about-us {
-  border: 2px solid #ffb347; /* Color naranja */
-  border-radius: 15px;
-  padding: 1rem;
-  background-color: #fffaf0; /* Fondo ligeramente amarillo */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 2rem auto;
-  max-width: 800px; /* Ancho máximo para centrar */
-  text-align: justify;
-  font-size: 1.6rem;
-  color: #666;
-}
-
-.logo-2{
-    float: left;
-}
-
-#economic { border-color: #f0a5a5; }
-#technological { border-color: #c0b0f0; }
-#environmental { border-color: #a5d5f0; }
-#social { border-color: #f0c5a5; }
-#technical { border-color: #b8e6a1; }

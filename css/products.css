@@ -31,13 +31,6 @@ body {
     gap: 10px;
 }
 
-#user-info img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
 #user-info span {
     margin-right: 5px;
 }
@@ -49,57 +42,70 @@ body {
     margin-right: 10px;
 }
 
-/* Botón de menú (derecha) */
-.navbar-toggle {
-    font-size: 1.5em;
-    cursor: pointer;
-    display: block;
-    margin-left: auto; /* Empuja el botón de menú a la derecha */
+/* Navbar */
+.navbar {
+    background-color: #88c057; /* Color común */
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Menú de navegación */
+.navbar-logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar-toggle {
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: none; /* Ocultar para pantallas grandes */
+}
+
 .navbar-menu {
     list-style: none;
-    display: none;
-    flex-direction: column;
-    gap: 15px;
-    margin: 0;
-    padding: 20px;
-    background-color: #80ac35;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-}
-
-.navbar-menu.show {
     display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.1em;
-    padding: 8px 12px;
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-    color: #000;
+    background-color: #222; /* Color común de fondo en hover */
+    color: #fff; /* Asegurar que el texto sea blanco */
 }
 
-/* Estilos para los elementos de la barra de navegación */
-.navbar-menu li {
-    list-style: none;
-}
-
-.navbar-menu li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 10px;
-}
-
-.navbar-menu li a:hover {
-    color: #000;
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Mostrar toggle en pantallas pequeñas */
+    }
+    .navbar-menu {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column;
+        background-color: #88c057; /* Color común */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+    }
+    .navbar-menu.show {
+        display: flex;
+    }
 }
 
 /* Page Title */
@@ -154,29 +160,36 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #a4dd43;
+    background-color: #88c057; /* Color común */
     color: #fff;
     padding: 20px;
     text-align: center;
-    margin-top: 60px;
+}
+
+.footer h3 {
+    margin-bottom: 10px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
 .footer a {
     color: #fff;
-    margin: 0 10px;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #000;
+    background-color: #222; /* Color común de fondo en hover */
+    color: #fff; /* Asegurar que el texto sea blanco */
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .navbar-menu {
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-    }
+.footer p {
+    font-size: 0.9rem;
+    margin: 0;
 }
