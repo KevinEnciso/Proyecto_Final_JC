@@ -42,6 +42,7 @@ body {
     padding: 0;
 }
 
+/* Enlaces del menú de navegación */
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
@@ -123,6 +124,27 @@ body {
     margin: 0;
 }
 
+/* Navbar Menu oculto por defecto en pantallas pequeñas */
+.navbar-menu {
+    display: none; /* Inicialmente oculto */
+}
+
+/* Muestra el menú cuando la clase 'show' está activa */
+.navbar-menu.show {
+    display: flex;
+    flex-direction: column; /* Hacer que los elementos se apilen verticalmente */
+    width: 100%;
+    gap: 10px;
+}
+
+/* Estilos para los elementos de navegación en pantallas pequeñas */
+.navbar-menu a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar {
@@ -130,25 +152,13 @@ body {
         padding: 10px;
     }
 
-    .navbar-menu {
-        flex-direction: column;
-        display: none; /* Inicialmente oculto */
-        width: 100%;
-        gap: 10px;
-    }
-
-    .navbar-menu a {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        border-top: 1px solid #ccc;
-    }
-
+    /* Mostrar el ícono del menú en pantallas pequeñas */
     .navbar-toggle {
         display: block;
         font-size: 2rem;
     }
 
+    /* Ajustes del banner en pantallas pequeñas */
     .banner {
         padding: 50px 20px;
     }
@@ -165,6 +175,7 @@ body {
         width: 200px; /* Ajuste de tamaño */
     }
 
+    /* Ajustes del pie de página */
     .footer {
         padding: 10px;
     }
