@@ -1,7 +1,6 @@
-// Función para alternar el menú de navegación en dispositivos móviles
 function toggleMenu() {
-    const menu = document.querySelector('.navbar-menu');
-    menu.classList.toggle('show');
+    const menu = document.getElementById('navbar-menu');
+    menu.classList.toggle('show'); // Alterna la clase 'show' para mostrar/ocultar el menú
 }
 
 document.addEventListener('DOMContentLoaded', function() {
