@@ -45,19 +45,6 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Encabezado de la Reseña */
-.review-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.review-header h3 {
-    font-size: 1.8rem;
-    color: #88c057;
-}
-
 /* Comentarios */
 .comments-section {
     margin-top: 1rem;

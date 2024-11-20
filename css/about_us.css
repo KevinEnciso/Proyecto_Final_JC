@@ -61,6 +61,7 @@ body {
     .navbar-toggle {
         display: block; /* Mostrar toggle en pantallas pequeñas */
     }
+
     .navbar-menu {
         display: none; /* Ocultar menú por defecto */
         flex-direction: column;
@@ -70,9 +71,16 @@ body {
         left: 0;
         width: 100%;
         padding: 20px;
+        gap: 10px;
     }
+
     .navbar-menu.show {
-        display: flex;
+        display: flex; /* Mostrar menú cuando esté en estado 'show' */
+    }
+
+    .navbar-menu a {
+        padding: 10px;
+        font-size: 1.2em;
     }
 }
 
@@ -84,6 +92,7 @@ body {
     margin: auto;
 }
 
+/* Logo y título */
 .logo-section {
     margin-bottom: 3rem;
 }
@@ -104,6 +113,7 @@ body {
     margin-bottom: 1rem;
 }
 
+/* Sobre Nosotros */
 #about-us {
     background-color: #fff;
     padding: 2rem;
@@ -168,4 +178,56 @@ body {
 .footer a:hover {
     background-color: #222; /* Color común de fondo en hover */
     color: #fff; /* Asegurar que el texto sea blanco */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .logo-section img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    #about-us {
+        padding: 1.5rem;
+    }
+
+    .objectives {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .logo-section img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .objective h2 {
+        font-size: 1.2rem;
+    }
+
+    .objective p {
+        font-size: 0.9rem;
+    }
+
+    .navbar-logo {
+        font-size: 1.5em;
+    }
+
+    .navbar-menu a {
+        font-size: 1em;
+        padding: 10px;
+    }
 }

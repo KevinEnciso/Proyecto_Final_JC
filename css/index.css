@@ -122,3 +122,50 @@ body {
     font-size: 0.9rem;
     margin: 0;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        display: none; /* Inicialmente oculto */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .navbar-menu a {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+    }
+
+    .navbar-toggle {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .banner {
+        padding: 50px 20px;
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    .banner p {
+        font-size: 1rem;
+    }
+
+    .banner-image {
+        width: 200px; /* Ajuste de tamaño */
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
