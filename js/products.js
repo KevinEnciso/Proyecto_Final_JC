@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const userLastname = document.getElementById('user-lastname');
     const loginLink = document.getElementById('login-link');
     const logoutLink = document.getElementById('logout-link');
-    const userAvatar = document.getElementById('user-avatar');
 
     // Obtener los datos del usuario de LocalStorage
     const user = JSON.parse(localStorage.getItem('user')); 
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Mostrar la información del usuario y el avatar
         username.textContent = user.name;
         userLastname.textContent = user.lastname;
-        userAvatar.src = user.avatar || '../images/default-avatar.png'; // Avatar por defecto si no tiene uno
 
         // Mostrar la información del usuario en el navbar
         userInfo.style.display = 'flex';

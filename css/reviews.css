@@ -130,8 +130,10 @@ textarea {
 }
 
 .navbar-menu a:hover {
-    background-color: #222; /* Color común de fondo en hover */
-    color: #fff; /* Asegurar que el texto sea blanco */
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
 }
 
 /* Responsive Navbar */
