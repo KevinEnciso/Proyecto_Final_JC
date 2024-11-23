@@ -113,6 +113,10 @@ body {
     color: #333;
     text-transform: uppercase;
     font-family: courier;
+    font-size: clamp(1.5rem, 5vw, 3rem); /* Tamaño mínimo, preferido (fluido) y máximo */
+    line-height: 1.2; /* Mejora la legibilidad */
+    text-align: center; /* Centra el texto */
+    margin: 0 auto;
 
 }
 
