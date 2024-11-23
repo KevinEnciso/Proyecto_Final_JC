@@ -13,21 +13,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-logo {
-    font-size: 1.8rem;
+    font-size: 1.8em;
     font-weight: bold;
     color: #fff;
 }
 
 .navbar-toggle {
-    font-size: 1.8rem;
+    font-size: 1.5em;
+    color: #fff;
     cursor: pointer;
     display: none;
 }
@@ -35,7 +35,7 @@
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin: 0;
     padding: 0;
 }
@@ -43,8 +43,10 @@
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    font-size: 1.1em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar-menu a:hover {
@@ -125,27 +127,31 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-    .navbar-menu {
-        display: none; 
-        flex-direction: column;
-        width: 100%;
-        gap: 10px;
-        background-color: #88c057; 
-        position: absolute;
-        top: 100%;
-        left: 0;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        z-index: 999;
-    }
-
-    .navbar-menu.show {
-        display: flex; 
-    }
-
     .navbar-toggle {
         display: block;
     }
 
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #88c057;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .navbar-menu.show {
+        display: flex;
+    }
+
+    .navbar-menu a {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+    
     .banner {
         padding: 50px 20px;
     }
