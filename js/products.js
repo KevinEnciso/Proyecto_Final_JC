@@ -36,3 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         loginLink.style.display = 'inline-block';
     }
 });
+
+function buy_register(){
+    window.location.href = '../html/buy_register.html';
+}
