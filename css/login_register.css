@@ -87,5 +87,5 @@ body {
 
 .form-container select:focus {
     outline: none;
-    border-color: #4CAF50; /* Agrega un borde verde al seleccionar */
+    border-color: #4CAF50;
 }

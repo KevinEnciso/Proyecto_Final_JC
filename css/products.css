@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,7 +5,6 @@ body {
     box-sizing: border-box;
 }
 
-/* Navbar */
 .navbar {
     background-color: #a4dd43;
     color: #fff;
@@ -16,14 +14,12 @@ body {
     padding: 15px 20px;
 }
 
-/* Logo */
 .navbar-logo {
     font-size: 1.8em;
     font-weight: bold;
-    flex-grow: 1; /* Empuja el logo hacia la izquierda */
+    flex-grow: 1; 
 }
 
-/* Información del usuario (izquierda) */
 #user-info {
     display: flex;
     align-items: center;
@@ -36,9 +32,8 @@ body {
     text-decoration: underline;
 }
 
-/* Navbar */
 .navbar {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057;
     color: #fff;
     display: flex;
     align-items: center;
@@ -59,7 +54,7 @@ body {
 .navbar-toggle {
     font-size: 1.8rem;
     cursor: pointer;
-    display: none; /* Ocultar para pantallas grandes */
+    display: none;
 }
 
 .navbar-menu {
@@ -84,15 +79,15 @@ body {
     border-radius: 5%;
 }
 
-/* Responsive Navbar */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar-toggle {
-        display: block; /* Mostrar toggle en pantallas pequeñas */
+        display: block;
     }
     .navbar-menu {
-        display: none; /* Ocultar menú por defecto */
+        display: none;
         flex-direction: column;
-        background-color: #88c057; /* Color común */
+        background-color: #88c057;
         position: absolute;
         top: 60px;
         left: 0;
@@ -107,7 +102,6 @@ body {
     }
 }
 
-/* Page Title */
 .page-title {
     text-align: center;
     margin: 20px 150px 20px 150px;
@@ -117,14 +111,13 @@ body {
     color: #333;
     text-transform: uppercase;
     font-family: courier;
-    font-size: clamp(1.5rem, 5vw, 3rem); /* Tamaño mínimo, preferido (fluido) y máximo */
-    line-height: 1.2; /* Mejora la legibilidad */
-    text-align: center; /* Centra el texto */
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.2; 
+    text-align: center; 
     margin: 0 auto;
 
 }
 
-/* Productos */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -165,9 +158,8 @@ body {
     text-align: center;
 }
 
-/* Footer */
 .footer {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -192,8 +184,10 @@ body {
 }
 
 .footer a:hover {
-    background-color: #222; /* Color común de fondo en hover */
-    color: #fff; /* Asegurar que el texto sea blanco */
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
 }
 
 .footer p {

@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -8,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Contenedor Principal */
 .container {
     text-align: center;
     padding: 2rem;
@@ -16,7 +14,7 @@ body {
     margin: auto;
 }
 
-/* Título */
+
 .title {
     font-size: 2.5rem;
     font-weight: bold;
@@ -24,14 +22,12 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Sección de Reseñas */
 .reviews {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-/* Estilo de cada Reseña */
 .review {
     background-color: #fff;
     padding: 1.5rem;
@@ -45,7 +41,6 @@ body {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Comentarios */
 .comments-section {
     margin-top: 1rem;
     text-align: left;
@@ -81,16 +76,14 @@ textarea {
     background-color: #6a9e44;
 }
 
-/* Estilo del nombre de usuario */
 .user-name {
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
 }
 
-/* Navbar */
 .navbar {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057;
     color: #fff;
     display: flex;
     align-items: center;
@@ -111,7 +104,7 @@ textarea {
 .navbar-toggle {
     font-size: 1.8rem;
     cursor: pointer;
-    display: none; /* Ocultar para pantallas grandes */
+    display: none;
 }
 
 .navbar-menu {
@@ -136,15 +129,15 @@ textarea {
     border-radius: 5%;
 }
 
-/* Responsive Navbar */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar-toggle {
-        display: block; /* Mostrar toggle en pantallas pequeñas */
+        display: block;
     }
     .navbar-menu {
-        display: none; /* Ocultar menú por defecto */
+        display: none;
         flex-direction: column;
-        background-color: #88c057; /* Color común */
+        background-color: #88c057;
         position: absolute;
         top: 60px;
         left: 0;
@@ -156,9 +149,8 @@ textarea {
     }
 }
 
-/* Footer */
 .footer {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057; 
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -183,8 +175,10 @@ textarea {
 }
 
 .footer a:hover {
-    background-color: #222; /* Color común de fondo en hover */
-    color: #fff; /* Asegurar que el texto sea blanco */
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
 }
 
 .footer p {

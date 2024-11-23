@@ -1,16 +1,14 @@
-/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f5f5f5; /* Fondo neutro */
-    color: #333; /* Texto oscuro para mejor legibilidad */
+    background-color: #f5f5f5; 
+    color: #333; 
 }
 
-/* Navbar */
 .navbar {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057;
     color: #fff;
     display: flex;
     align-items: center;
@@ -31,7 +29,7 @@ body {
     font-size: 1.5em;
     color: #fff;
     cursor: pointer;
-    display: none; /* Ocultar para pantallas grandes */
+    display: none;
 }
 
 .navbar-menu {
@@ -58,16 +56,16 @@ body {
     border-radius: 5%;
 }
 
-/* Responsive Navbar */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar-toggle {
-        display: block; /* Mostrar toggle en pantallas pequeñas */
+        display: block;
     }
 
     .navbar-menu {
-        display: none; /* Ocultar menú por defecto */
+        display: none;
         flex-direction: column;
-        background-color: #88c057; /* Color común */
+        background-color: #88c057;
         position: absolute;
         top: 60px;
         left: 0;
@@ -77,7 +75,7 @@ body {
     }
 
     .navbar-menu.show {
-        display: flex; /* Mostrar menú cuando esté en estado 'show' */
+        display: flex;
     }
 
     .navbar-menu a {
@@ -86,7 +84,6 @@ body {
     }
 }
 
-/* Contenedor principal */
 .container {
     text-align: center;
     padding: 2rem;
@@ -94,7 +91,6 @@ body {
     margin: auto;
 }
 
-/* Logo y título */
 .logo-section {
     margin-bottom: 3rem;
 }
@@ -111,11 +107,10 @@ body {
 .title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #88c057; /* Color común */
+    color: #88c057;
     margin-bottom: 1rem;
 }
 
-/* Sobre Nosotros */
 #about-us {
     background-color: #fff;
     padding: 2rem;
@@ -128,7 +123,6 @@ body {
     color: #555;
 }
 
-/* Sección de objetivos */
 .objectives {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -151,7 +145,7 @@ body {
 
 .objective h2 {
     font-size: 1.5rem;
-    color: #88c057; /* Color común */
+    color: #88c057;
     margin-bottom: 1rem;
 }
 
@@ -161,9 +155,8 @@ body {
     text-align: justify;
 }
 
-/* Footer */
 .footer {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057; 
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -178,11 +171,13 @@ body {
 }
 
 .footer a:hover {
-    background-color: #222; /* Color común de fondo en hover */
-    color: #fff; /* Asegurar que el texto sea blanco */
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 1200px) {
     .container {
         padding: 1rem;

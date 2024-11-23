@@ -1,5 +1,4 @@
-/* General Styles */
-body {
+ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +7,6 @@ body {
     color: #333;
 }
 
-/* Navbar */
 .navbar {
     background-color: #88c057;
     color: #fff;
@@ -31,18 +29,17 @@ body {
 .navbar-toggle {
     font-size: 1.8rem;
     cursor: pointer;
-    display: none; /* Ocultar para pantallas grandes */
+    display: none;
 }
 
 .navbar-menu {
     list-style: none;
-    display: flex; /* Asegurarse de que sea visible en pantallas grandes */
+    display: flex;
     gap: 20px;
     margin: 0;
     padding: 0;
 }
 
-/* Enlaces del menú de navegación */
 .navbar-menu a {
     color: #fff;
     text-decoration: none;
@@ -57,7 +54,6 @@ body {
     border-radius: 5%;
 }
 
-/* Banner Section */
 .banner {
     background-color: #e9f7df;
     padding: 100px 20px;
@@ -83,16 +79,15 @@ body {
 }
 
 .banner-image {
-    width: 300px; /* Tamaño más grande */
+    width: 300px;
     height: auto;
     border-radius: 50%;
-    border: 5px solid #88c057; /* Borde más grueso para equilibrar */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Sombra ligeramente más intensa */
+    border: 5px solid #88c057; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
 .footer {
-    background-color: #88c057; /* Color común */
+    background-color: #88c057;
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -117,8 +112,10 @@ body {
 }
 
 .footer a:hover {
-    background-color: #222; /* Color común de fondo en hover */
-    color: #fff; /* Asegurar que el texto sea blanco */
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5%;
 }
 
 .footer p {
@@ -126,14 +123,14 @@ body {
     margin: 0;
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
     .navbar-menu {
-        display: none; /* Ocultar el menú */
-        flex-direction: column; /* Hacer que los elementos se apilen verticalmente */
+        display: none; 
+        flex-direction: column;
         width: 100%;
         gap: 10px;
-        background-color: #88c057; /* Color de fondo del menú desplegable */
+        background-color: #88c057; 
         position: absolute;
         top: 100%;
         left: 0;
@@ -142,14 +139,13 @@ body {
     }
 
     .navbar-menu.show {
-        display: flex; /* Mostrar el menú cuando tenga la clase 'show' */
+        display: flex; 
     }
 
     .navbar-toggle {
-        display: block; /* Mostrar el ícono del menú */
+        display: block;
     }
 
-    /* Ajustes del banner en pantallas pequeñas */
     .banner {
         padding: 50px 20px;
     }
@@ -163,10 +159,9 @@ body {
     }
 
     .banner-image {
-        width: 200px; /* Ajuste de tamaño */
+        width: 200px; 
     }
 
-    /* Ajustes del pie de página */
     .footer {
         padding: 10px;
     }
